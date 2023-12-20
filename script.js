@@ -13,6 +13,13 @@ addButton.addEventListener('click', function() {
         // Create a new list item 
         let listItem = document.createElement('li');
         listItem.textContent = taskText; // adjusting text (user input) to listItem 
+        //  span for the task text
+        let taskSpan = document.createElement('span');
+        taskSpan.textContent = taskText;
+        listItem.appendChild(taskSpan);
+
+        // Add multiple spaces between the task text and the delete button for increased spacing
+        listItem.appendChild(document.createTextNode('    '));  // Four spaces
 
         // Create a delete button for each task
         let deleteButton = document.createElement('button');
