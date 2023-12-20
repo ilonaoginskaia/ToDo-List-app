@@ -1,4 +1,4 @@
-/* style for the whole page*/
+/* style for the whole page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,7 +22,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* input field and button  */
+/* input field and button */
 .create_new_todo {
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@ body {
     background-color: #0056b3;
 }
 
-/*  ToDo list items */
+/* ToDo list items */
 .wrapper ul {
     list-style-type: none;
     padding: 0;
@@ -70,4 +70,9 @@ body {
 
 .wrapper ul li:last-child {
     margin-bottom: 0;
+}
+
+/* making space between task text and delete button */
+.wrapper ul li span {
+    margin-right: 20px; 
 }
