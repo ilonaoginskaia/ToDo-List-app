@@ -12,14 +12,19 @@ addButton.addEventListener('click', function() {
     if (taskText !== '') {
         // Create a new list item 
         let listItem = document.createElement('li');
-        listItem.textContent = taskText; // adjusting text (user input) to listItem 
-        //  span for the task text
+
+        // Here we create checkbox for every task element
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        listItem.appendChild(checkbox);
+
+        // Create a span for the task text
         let taskSpan = document.createElement('span');
         taskSpan.textContent = taskText;
         listItem.appendChild(taskSpan);
 
         // Add multiple spaces between the task text and the delete button for increased spacing
-        listItem.appendChild(document.createTextNode('    '));  // Four spaces
+        listItem.appendChild(document.createTextNode('       '));  // Seven spaces
 
         // Create a delete button for each task
         let deleteButton = document.createElement('button');
@@ -42,5 +47,3 @@ addButton.addEventListener('click', function() {
         alert('Please enter a task!');
     }
 });
-
-
