@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaSript Project</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="styles.css"> 
+    <title>ToDo</title>
+    <script src="script.js"></script>
+    
 </head>
 <body>
-    
+<div class="container"> <!-- main container -->
+
+   <div class="todo_list"> <!-- ToDo list section -->
+        <h1>Your ToDo list</h1> <!--Heading for the list-->
+
+       <div class="create_new_todo"> <!--Container where user creates his tasks-->
+           <input type="text" class="message" placeholder="Put your task here"><!--User input here-->
+           <button class="add">Add</button><!--button for submitting tasks to users list-->
+       </div>
+
+       <div class="wrapper"> <!-- section for list items-->
+           <ul class="todo"></ul><!--list of tasks shows here-->
+       </div>
+
+   </div>
+
+</div>
+
 </body>
 </html>
