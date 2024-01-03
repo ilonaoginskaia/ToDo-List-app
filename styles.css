@@ -1,0 +1,78 @@
+/* style for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4af1c;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* style for ToDo list section */
+.todo_list h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* input field and button */
+.create_new_todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create_new_todo .message {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; 
+}
+
+.create_new_todo .add {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #6e541c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create_new_todo .add:hover {
+    background-color: #065808;
+}
+
+/* ToDo list items */
+.wrapper ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.wrapper ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border-left: 4px solid #065808;
+}
+
+.wrapper ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* making space between task text and delete button */
+.wrapper ul li span {
+    margin-right: 20px; 
+}
