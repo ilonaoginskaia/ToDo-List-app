@@ -92,5 +92,16 @@ function displayTask(taskText) {
         listItem.remove();
         saveTasks();
     });
+
+
+    // Add event listener to checkbox (if the task is completed it is crossed by the line)
+    checkbox.addEventListener('change', function() {
+        if (checkbox.checked) {
+            listItem.classList.add('completed'); // + 'completed' class
+        } else {
+            listItem.classList.remove('completed'); // -'completed' class
+        }
+        saveTasks();
+    });
     todoList.appendChild(listItem);
 }
