@@ -1,6 +1,7 @@
 // Selecting elements using querySelector
 let input = document.querySelector('.message');
 let addButton = document.querySelector('.add');
+let clearAllButton = document.querySelector('.clear-all'); // Selecting Clear All button
 let todoList = document.querySelector('.todo');
 
 // adding event listener to addButton. listening when the button is clicked and then executing the next function
@@ -23,8 +24,7 @@ addButton.addEventListener('click', function() {
         taskSpan.textContent = taskText;
         listItem.appendChild(taskSpan);
 
-        // Add multiple spaces between the task text and the delete button for increased spacing
-        listItem.appendChild(document.createTextNode('       '));  // Seven spaces
+        
 
         // Create a delete button for each task
         let deleteButton = document.createElement('button');
@@ -53,22 +53,26 @@ addButton.addEventListener('click', function() {
     }
 });
 
+// Event listener for Clear All button(when the button is clicked all tasks are deleted including local storage)
+clearAllButton.addEventListener('click', function() {
+    todoList.innerHTML = ''; // Clear all tasks from the list
+    localStorage.removeItem('tasks'); // Clear tasks from localStorage
+});
+
 // Function (saving tasks to localStorage)
 function saveTasks() {
-    let tasks = [];//it starts empty array with name "Tasks" and it will store the text for each task
-    let lis = todoList.querySelectorAll('li');//selecting all list items <li> from todolist and then store in 'lis'
+    let tasks = [];
+    let lis = todoList.querySelectorAll('li');
     lis.forEach(li => {
-        // Extracting the text of <span > element within each list item
         tasks.push(li.querySelector('span').textContent);
     });
-    // Save the tasks array to localStorage
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Load tasks from localStorage on page 
-window.addEventListener('load', function() { //when the whole page is loaded (f.e. css, js, images...) the function will be executed
-    let tasks = JSON.parse(localStorage.getItem('tasks'));//retrive tasks from local storage
-    if (tasks) { //checking if array is not empty 
+window.addEventListener('load', function() {
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks) {
         tasks.forEach(task => {
             displayTask(task);
         });
@@ -92,7 +96,6 @@ function displayTask(taskText) {
         listItem.remove();
         saveTasks();
     });
-
 
     // Add event listener to checkbox (if the task is completed it is crossed by the line)
     checkbox.addEventListener('change', function() {
