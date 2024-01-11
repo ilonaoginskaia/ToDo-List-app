@@ -1,4 +1,4 @@
-/* style for the whole page */
+/* Styles for the whole page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +6,7 @@ body {
     background-color: #d4af1c;
 }
 
+/* Main container styles */
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -15,14 +16,14 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* style for ToDo list section */
+/* ToDo list section styles */
 .todo_list h1 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* input field and button */
+/* Input field and button styles */
 .create_new_todo {
     display: flex;
     justify-content: space-between;
@@ -36,7 +37,7 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .create_new_todo .add {
@@ -47,14 +48,14 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; 
 }
 
 .create_new_todo .add:hover {
-    background-color: #065808;
+    background-color: #065808; 
 }
 
-/* ToDo list items */
+/* ToDo list items styles */
 .wrapper ul {
     list-style-type: none;
     padding: 0;
@@ -66,17 +67,12 @@ body {
     margin-bottom: 5px;
     border-radius: 4px;
     border-left: 4px solid #065808;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .wrapper ul li:last-child {
     margin-bottom: 0;
-}
-/* crossing the completed task*/
-.wrapper ul li.completed span {
-    text-decoration: line-through;
-    color: #aaa; 
 }
 
 /* Delete button styling */
@@ -90,9 +86,26 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; 
 }
 
 .wrapper ul li button:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; 
+}
+
+/* Clear All button styles */
+.clear-all {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    margin-top: 20px;
+}
+
+.clear-all:hover {
+    background-color: #c0392b; 
 }
