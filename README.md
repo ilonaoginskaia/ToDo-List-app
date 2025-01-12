@@ -22,7 +22,8 @@ A simple, interactive ToDo list application that allows users to manage their ta
 
 1. **Add Tasks**: Type your task in the input box and click "Add".
 2. **Manage Tasks**: Use the delete button to remove individual tasks or "Clear All" to start fresh.
+
 3. **Save Tasks**: Tasks are saved in the browser's local storage and reloaded upon revisiting the app.
 4. **Export Tasks**: Use the feature to save tasks as a PDF document for external use.
 
-
+![ToDoList_Interface](https://github.com/user-attachments/assets/86197012-4b45-44b5-a044-3a92c43ea97a)
